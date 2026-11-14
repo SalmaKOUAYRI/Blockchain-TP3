@@ -1,0 +1,62 @@
+Analyse d’une transaction Bitcoin sur TestNet4
+
+Dans le cadre de ce TP, nous avons étudié une transaction réalisée sur le réseau Bitcoin TestNet4. L’objectif est de comprendre les différentes informations liées à une transaction et de voir comment elles apparaissent sur un explorateur de blockchain, notamment Mempool.space.
+
+1. Informations générales
+
+* Réseau : Bitcoin TestNet4
+* Outil utilisé : Mempool.space
+* Transaction ID (TxID) : 75b8aa2128f5a318014e4e50511a140aafe1cf114e34dda33587d1a9bfbf58ac
+* Date et heure : 23/10/2026 à 18:11:03
+* Block Height : 157416
+* Nombre de confirmations : 3 869
+
+La transaction a été enregistrée dans un bloc de la blockchain. Son identifiant permet de retrouver ses détails et de vérifier son statut sur le réseau.
+
+2. Analyse de la transaction
+
+A. Inputs (Entrées)
+
+Les Inputs correspondent aux fonds utilisés pour réaliser la transaction. Dans cette opération, le wallet de l’expéditeur utilise des UTXOs provenant de transactions précédentes.
+
+Ces fonds servent à couvrir le montant du transfert ainsi que les frais de transaction.
+
+B. Outputs (Sorties)
+
+Les Outputs représentent la destination des bitcoins après l’exécution de la transaction.
+
+Dans le cadre de notre TP, nous avons relevé les éléments suivants :
+
+* Montant sortant de Wallet A : 0.00553913 tBTC.
+* Montant reçu lors de la transaction précédente (TP1) : 0.00059221 tBTC.
+* Change : lorsque les fonds utilisés dépassent le montant nécessaire à l’envoi et les frais, le montant restant peut être renvoyé vers une adresse appartenant à l’expéditeur.
+
+Il faut distinguer le montant envoyé au destinataire du montant éventuellement retourné au wallet de départ.
+
+C. Transaction Fees (Frais de transaction)
+
+Les frais associés à cette transaction sont de 167 satoshis.
+
+Ils représentent le montant payé pour que la transaction soit prise en compte par les mineurs et intégrée dans un bloc.
+
+Le taux de frais indiqué est d’environ 1 sat/vB. Il exprime le coût de la transaction en fonction de sa taille virtuelle, exprimée en vBytes.
+
+Comme l’opération a été effectuée sur TestNet4, les bitcoins utilisés sont des unités de test sans valeur monétaire réelle.
+
+D. Modèle UTXO et sécurité
+
+Cette transaction permet d’illustrer le modèle UTXO utilisé par Bitcoin.
+
+Contrairement à un compte bancaire classique, Bitcoin ne fonctionne pas avec un solde global. Les fonds sont représentés par des sorties de transactions précédentes qui peuvent être utilisées comme entrées dans une nouvelle transaction.
+
+Chaque entrée doit être autorisée par une signature numérique liée à la clé privée du propriétaire.
+
+Ce mécanisme permet de vérifier la validité des opérations et d’empêcher la double dépense des mêmes fonds.
+
+3. Conclusion
+
+Cette analyse nous a permis de mieux comprendre le fonctionnement d’une transaction Bitcoin sur le réseau TestNet4.
+
+À travers l’observation des Inputs, des Outputs, des frais et des confirmations, nous avons pu identifier les principales étapes d’une transaction.
+
+L’utilisation de Mempool.space nous a également permis de consulter les données directement sur la blockchain et de mieux comprendre le rôle du modèle UTXO dans le fonctionnement de Bitcoin.
